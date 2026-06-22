@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Mening Shaxsiy Blogim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">🚀 Mening Super Blogim</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                {% for post in maqolalar %}
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title text-primary">{{ post.title }}</h2>
+                        <p class="card-text text-secondary">{{ post.text }}</p>
+                        <small class="text-muted">Joylangan vaqti: {{ post.created_at }}</small>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
